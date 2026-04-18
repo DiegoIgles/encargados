@@ -24,10 +24,8 @@ function openModal(evento, organizador, numero) {
   modalTitle.textContent = evento;
   modalOrganizer.textContent = "Organizador: " + organizador;
 
-  // WhatsApp dinámico
-  const mensajeWA = `Hola ${organizador}, estoy interesado en ${evento}`;
-  const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensajeWA)}`;
-  whatsappLink.href = url;
+  // 👉 Ahora es link de grupo
+  whatsappLink.href = numero;
 
   // 🔥 Cambiar mensaje + animar
   mensaje.textContent = `Estás viendo: ${evento}`;

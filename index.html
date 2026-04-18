@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Eventos</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- Fuente -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <!-- AOS Animaciones -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- 🔝 HEADER -->
+<header class="header">
+  <div class="brand">
+    <img src="img/logo.png" alt="Logo" class="logo">
+    <h1>Anonymous Ficct</h1>
+  </div>
+</header>
+
+<p id="mensaje" class="mensaje">
+Haz clic en un evento para ver detalles e inscribirte
+</p>
+
+<!-- 🖼️ GALERÍA -->
+<section class="gallery">
+
+  <!-- EVENTO 1 -->
+  <div class="card" data-aos="fade-up" data-aos-delay="0"
+    onclick="openModal('Torneo Clash Royale', 'Sergio Jhoel', '123456789')">
+    <img src="img/evento1.jpg">
+    <div class="card-info">
+      <h3>Torneo Clash Royale</h3>
+      <p>Compite y gana premios</p>
+    </div>
+  </div>
+
+  <!-- EVENTO 2 -->
+  <div class="card" data-aos="fade-up" data-aos-delay="100"
+    onclick="openModal('Torneo Brawl Stars', 'Dereck Montenegro', '987654321')">
+    <img src="img/evento2.jpg">
+    <div class="card-info">
+      <h3>Torneo Brawl Stars</h3>
+      <p>Demuestra tus habilidades</p>
+    </div>
+  </div>
+
+  <!-- EVENTO 3 -->
+  <div class="card" data-aos="fade-up" data-aos-delay="200"
+    onclick="openModal('Torneo de Ajedrez', 'Fernando Baptista', '111222333')">
+    <img src="img/evento3.jpg">
+    <div class="card-info">
+      <h3>Torneo de Ajedrez</h3>
+      <p>Desafia tu oponente</p>
+    </div>
+  </div>
+
+  <!-- EVENTO 4 -->
+  <div class="card" data-aos="fade-up" data-aos-delay="300"
+    onclick="openModal('Torneo de Tekken', 'Alessandro', '444555666')">
+    <img src="img/evento4.jpg">
+    <div class="card-info">
+      <h3>Torneo Tekken</h3>
+      <p>Combates intensos</p>
+    </div>
+  </div>
+
+  <!-- EVENTO 5 -->
+  <div class="card" data-aos="fade-up" data-aos-delay="400"
+    onclick="openModal('Olimpiadas de Matemáticas', 'Cristopher Carballo', '777888999')">
+    <img src="img/evento5.jpg">
+    <div class="card-info">
+      <h3>Olimpiadas de Matemáticas</h3>
+      <p>Reta tu lógica</p>
+    </div>
+  </div>
+
+  <!-- EVENTO 6 -->
+  <div class="card" data-aos="fade-up" data-aos-delay="500"
+    onclick="openModal('Boxeo', 'Jhamil Veliz', '222333444')">
+    <img src="img/evento6.jpg">
+    <div class="card-info">
+      <h3>Boxeo</h3>
+      <p>Combates intensos</p>
+    </div>
+  </div>
+
+  <!-- EVENTO 7 -->
+  <div class="card" data-aos="fade-up" data-aos-delay="600"
+    onclick="openModal('Torneo Mobile Legends', 'Abigail', '555666777')">
+    <img src="img/evento7.jpg">
+    <div class="card-info">
+      <h3>Torneo Mobile Legends</h3>
+      <p>Desafios por equipos</p>
+    </div>
+  </div>
+
+  <!-- EVENTO 8 -->
+  <div class="card" data-aos="fade-up" data-aos-delay="700"
+    onclick="openModal('Torneo Free Fire', 'Fernando Serrudo', '888999000')">
+    <img src="img/evento8.jpg">
+    <div class="card-info">
+      <h3>Torneo Free Fire</h3>
+      <p>Demuestra tu habilidad</p>
+    </div>
+  </div>
+
+  <!-- EVENTO 9 -->
+  <div class="card" data-aos="fade-up" data-aos-delay="800"
+    onclick="openModal('Futbolin', 'Misael', '666777888')">
+    <img src="img/evento9.jpg">
+    <div class="card-info">
+      <h3>Futbolin</h3>
+      <p>Disfruta del fútbol</p>
+    </div>
+  </div>
+
+</section>
+
+<!-- 💬 MODAL -->
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+
+    <h2 id="modal-title"></h2>
+    <p id="modal-organizer"></p>
+
+    <a id="whatsapp-link" target="_blank" class="btn-whatsapp">
+  <i class="fab fa-whatsapp"></i>
+  Contactar por WhatsApp
+</a>
+  </div>
+</div>
+
+<!-- Scripts -->
+<script src="js/app.js"></script>
+
+<!-- AOS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+    once: true,
+    duration: 800,
+    easing: 'ease-out-cubic'
+  });
+</script>
+
+</body>
+</html>

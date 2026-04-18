@@ -1,0 +1,290 @@
+/* 🔥 FONT LOCAL */
+@font-face {
+  font-family: 'Nunito';
+  src: url('../fonts/Nunito-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+/* 🔥 RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+
+/* 🌍 GLOBAL */
+html, body {
+  background: #0f0f0f;
+  color: #fff;
+  font-family: 'Nunito', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* ✨ TRANSICIONES */
+* {
+  transition: all 0.25s ease;
+}
+
+/* 🧠 TIPOGRAFÍA GLOBAL */
+h1, h2, h3 {
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+h4, h5, h6 {
+  font-weight: 600;
+}
+
+p, span, a, button {
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button, input, textarea {
+  font-family: inherit;
+}
+
+/* 🔝 HEADER */
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* marca */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  animation: fadeDown 0.8s ease;
+}
+
+.logo {
+  width: 45px;
+  height: 45px;
+  animation: spinIn 0.8s ease;
+}
+
+.brand h1 {
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: -1px;
+  text-shadow: 0 0 10px rgba(255,255,255,0.2);
+}
+
+/* 🖼️ GALERÍA */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+/* 📦 CARD */
+.card {
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+/* imagen */
+.card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* overlay */
+.card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
+  opacity: 0;
+}
+
+/* hover */
+.card:hover img {
+  transform: scale(1.1);
+}
+
+.card:hover::after {
+  opacity: 1;
+}
+
+/* info */
+.card-info {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+}
+
+.card-info h3 {
+  margin-bottom: 5px;
+}
+
+.card-info p {
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+/* 💬 MODAL */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+}
+
+.modal.show {
+  display: flex;
+  opacity: 1;
+}
+
+/* 📦 MODAL CONTENT */
+.modal-content {
+  background: rgba(26, 26, 26, 0.75);
+  backdrop-filter: blur(12px);
+  padding: 30px;
+  border-radius: 20px;
+  text-align: center;
+  width: 90%;
+  max-width: 400px;
+
+  transform: scale(0.7) translateY(20px);
+}
+
+.modal.show .modal-content {
+  transform: scale(1) translateY(0);
+}
+
+/* ❌ CLOSE */
+.close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/* 🟢 BOTÓN WHATSAPP */
+.btn-whatsapp {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 20px;
+  background: #25D366;
+  color: white;
+  border-radius: 8px;
+  font-weight: 600;
+  animation: pulse 2s infinite;
+}
+
+.btn-whatsapp:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(37,211,102,0.4);
+}
+
+/* 💬 MENSAJE */
+.mensaje {
+  text-align: center;
+  margin: 10px 20px 25px;
+  font-size: 0.95rem;
+  color: #aaa;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  opacity: 0.8;
+}
+
+/* animación */
+.animar {
+  animation: fadeIn 0.6s ease;
+}
+
+/* 🔝 SCROLL BUTTON */
+.scroll-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #1a1a1a;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.scroll-top:hover {
+  opacity: 1;
+}
+
+/* 🎬 ANIMACIONES */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-15px) scale(0.95);
+    filter: blur(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+}
+
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes spinIn {
+  from {
+    transform: rotate(-180deg) scale(0.5);
+    opacity: 0;
+  }
+  to {
+    transform: rotate(0) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(37,211,102,0.5); }
+  70% { box-shadow: 0 0 0 15px rgba(37,211,102,0); }
+  100% { box-shadow: 0 0 0 0 rgba(37,211,102,0); }
+}
+
+.btn-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.btn-whatsapp i {
+  font-size: 1.2rem;
+}
